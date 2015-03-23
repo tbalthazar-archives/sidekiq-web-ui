@@ -7,11 +7,6 @@ Sidekiq.configure_client do |config|
   }
 end
 
-# require 'sidekiq/web'
-# run Sidekiq::Web
-
-
-
 require 'sidekiq/web'
 map '/' do
   use Rack::Auth::Basic, "Protected Area" do |username, password|
