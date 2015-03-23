@@ -1,10 +1,11 @@
 require 'sidekiq'
 
 Sidekiq.configure_client do |config|
-  config.redis = { :size => 1 }
+  config.redis = { 
+    :size => 1,
+    :url => ENV['REDIS_PROVIDER']
+  }
 end
-
-puts "--- hey"
 
 require 'sidekiq/web'
 run Sidekiq::Web
