@@ -12,6 +12,6 @@ map '/' do
   use Rack::Auth::Basic, "Protected Area" do |username, password|
     username == ENV['USERNAME'] && password == ENV['PASSWORD']
   end
-
+  Sidekiq::Web.use Rack::Session::Cookie, :secret => ENV['RACK_SESSION_COOKIE']
   run Sidekiq::Web
 end
