@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.2.4'
 
 gem 'puma'
 gem 'sinatra'
-gem 'sidekiq', '~> 3.5'
+gem 'sidekiq', '4.0.1'
