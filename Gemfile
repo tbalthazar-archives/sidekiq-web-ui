@@ -4,4 +4,4 @@ ruby '2.2.4'
 
 gem 'puma'
 gem 'sinatra'
-gem 'sidekiq', '4.0.1'
+gem 'sidekiq', '= 5.0.4'
